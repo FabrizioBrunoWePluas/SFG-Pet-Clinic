@@ -71,7 +71,6 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/FabrizioBrunoWePluas/SFG-Pet-Clinic.git</developerConnection>
-	  <tag>sfg-pet-clinic-0.0.3</tag>
   </scm>
 
 </project>
