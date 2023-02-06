@@ -1,4 +1,4 @@
-package UAccademy.model;
+package UAccademy.Model;
 
 public class Vet extends Person{
 

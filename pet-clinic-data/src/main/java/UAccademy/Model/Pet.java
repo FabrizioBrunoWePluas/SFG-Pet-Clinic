@@ -1,4 +1,4 @@
-package UAccademy.model;
+package UAccademy.Model;
 
 import java.time.LocalDate;
 
