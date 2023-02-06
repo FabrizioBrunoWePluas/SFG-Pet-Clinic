@@ -1,4 +1,4 @@
-package UAccademy.sfgpetclinic;
+package UAccademy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
