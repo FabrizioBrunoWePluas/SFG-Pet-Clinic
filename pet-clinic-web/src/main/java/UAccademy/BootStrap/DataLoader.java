@@ -1,12 +1,10 @@
 package UAccademy.BootStrap;
 
 import UAccademy.Model.Owner;
-import UAccademy.Model.Person;
 import UAccademy.Model.Vet;
-import UAccademy.Service.Map.OwnerServiceMap;
-import UAccademy.Service.Map.VetServiceMap;
 import UAccademy.Service.OwnerService;
 import UAccademy.Service.VetService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,9 +14,10 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService =  new OwnerServiceMap();
-        vetService =  new VetServiceMap();
+
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
