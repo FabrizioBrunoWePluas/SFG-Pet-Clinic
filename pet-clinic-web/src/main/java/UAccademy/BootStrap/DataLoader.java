@@ -1,8 +1,11 @@
 package UAccademy.BootStrap;
 
 import UAccademy.Model.Owner;
+import UAccademy.Model.Pet;
+import UAccademy.Model.PetType;
 import UAccademy.Model.Vet;
 import UAccademy.Service.OwnerService;
+import UAccademy.Service.PetTypeService;
 import UAccademy.Service.VetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,15 +16,20 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    //Lezione 122, minuto 2:19
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
