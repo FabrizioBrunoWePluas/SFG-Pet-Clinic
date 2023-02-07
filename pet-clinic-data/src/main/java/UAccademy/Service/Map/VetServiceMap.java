@@ -2,11 +2,11 @@ package UAccademy.Service.Map;
 
 
 import UAccademy.Model.Vet;
-import UAccademy.Service.CrudService;
+import UAccademy.Service.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
 
     @Override

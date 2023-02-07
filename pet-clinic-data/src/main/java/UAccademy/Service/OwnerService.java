@@ -1,8 +1,7 @@
 package UAccademy.Service;
 
 import UAccademy.Model.Owner;
-
-import java.util.Set;
+import UAccademy.Model.Person;
 
 public interface OwnerService extends CrudService<Owner, Long>{
 

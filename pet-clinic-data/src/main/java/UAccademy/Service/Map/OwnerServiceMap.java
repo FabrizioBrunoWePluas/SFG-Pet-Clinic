@@ -1,11 +1,10 @@
 package UAccademy.Service.Map;
 
 import UAccademy.Model.Owner;
-import UAccademy.Service.CrudService;
-
+import UAccademy.Service.OwnerService;
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long>{
+public class OwnerServiceMap extends AbstractMapService<Owner, Long>  implements OwnerService {
 
 
     @Override
@@ -31,5 +30,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public Owner save( Owner objcet) {
         return super.save(objcet.getId(), objcet);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return findByLastName(lastName);
     }
 }
