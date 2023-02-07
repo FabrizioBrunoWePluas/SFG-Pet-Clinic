@@ -33,7 +33,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long>  implements
 
     @Override
     public Owner save( Owner objcet) {
-        return super.save(objcet.getId(), objcet);
+        return super.save(objcet);
     }
 
     @Override
