@@ -29,7 +29,12 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         PetType dog = new PetType();
-        dog
+        dog.setName("Dog");
+        PetType saveDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        dog.setName("Cat");
+        PetType saveCatType = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
