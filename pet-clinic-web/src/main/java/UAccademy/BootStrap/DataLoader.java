@@ -35,6 +35,8 @@ public class DataLoader implements CommandLineRunner {
             loadData();
         }
 
+        System.out.println(count);
+
 
     }
 
