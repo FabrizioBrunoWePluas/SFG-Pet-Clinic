@@ -2,11 +2,9 @@ package UAccademy.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
-@Setter
+@Data
 @MappedSuperclass
 public class Person extends BaseEntity{
 

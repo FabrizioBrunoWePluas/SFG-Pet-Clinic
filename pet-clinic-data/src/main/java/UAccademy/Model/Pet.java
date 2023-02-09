@@ -1,14 +1,12 @@
 package UAccademy.Model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Set;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name= "pets")
 public class Pet  extends BaseEntity{

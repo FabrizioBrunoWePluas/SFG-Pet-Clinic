@@ -3,11 +3,9 @@ package UAccademy.Model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "specialities")
 public class Speciality extends BaseEntity{
