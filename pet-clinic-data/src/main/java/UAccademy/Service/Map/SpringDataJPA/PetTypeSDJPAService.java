@@ -22,14 +22,14 @@ public class PetTypeSDJPAService implements PetTypeService {
 
     @Override
     public Set<PetType> findAll() {
-        Set<PetType> pet = new HashSet<>();
+        Set<PetType> petTypes = new HashSet<>();
 
         //The double colon (::) operator, also known as method reference operator in Java, is used to call a method by referring to it with the help of its class directly.
         // They behave exactly as the lambda expressions. The only difference it has from lambda expressions is that this uses direct
         // reference to the method by name instead of providing a delegate to the method.
-        petTypeRepository.findAll().forEach(pet::add);
+        petTypeRepository.findAll().forEach(petTypes::add);
 
-        return pet;
+        return petTypes;
     }
 
     @Override
