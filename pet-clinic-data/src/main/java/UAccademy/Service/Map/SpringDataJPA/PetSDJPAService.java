@@ -4,10 +4,14 @@ import UAccademy.Model.Pet;
 import UAccademy.Model.PetType;
 import UAccademy.Repository.PetRepositry;
 import UAccademy.Service.PetService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
+@Profile("SpringDataJPA")
 public class PetSDJPAService implements PetService {
 
     private final PetRepositry petRepositry;
