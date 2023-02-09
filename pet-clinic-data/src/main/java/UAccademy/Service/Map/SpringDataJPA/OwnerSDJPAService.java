@@ -46,13 +46,19 @@ public class OwnerSDJPAService implements OwnerService {
     }
 
     @Override
-    public Owner save(Owner objcet) {
-        return ownerRepository.save(objcet);
+    public Owner save(Owner object) {
+
+        System.out.println("#######################");
+        System.out.println("#######################");
+        System.out.println("#######################");
+        System.out.println("#######################");
+
+        return ownerRepository.save(object);
     }
 
     @Override
-    public void delete(Owner objcet) {
-        ownerRepository.delete(objcet);
+    public void delete(Owner object) {
+        ownerRepository.delete(object);
     }
 
     @Override

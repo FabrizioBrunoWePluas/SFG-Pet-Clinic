@@ -1,0 +1,8 @@
+spring:
+  banner:
+    image:
+      location: vizsla.jpg
+  messages:
+    basename: messages/messages
+  profiles:
+    active: "SpringDataJPA"

@@ -38,13 +38,13 @@ public class PetSDJPAService implements PetService {
     }
 
     @Override
-    public Pet save(Pet objcet) {
-        return petRepositry.save(objcet);
+    public Pet save(Pet object) {
+        return petRepositry.save(object);
     }
 
     @Override
-    public void delete(Pet objcet) {
-        petRepositry.delete(objcet);
+    public void delete(Pet object) {
+        petRepositry.delete(object);
     }
 
     @Override
