@@ -1,10 +1,8 @@
 package UAccademy.BootStrap;
 
 import UAccademy.Model.*;
-import UAccademy.Service.OwnerService;
-import UAccademy.Service.PetTypeService;
-import UAccademy.Service.SpecialityService;
-import UAccademy.Service.VetService;
+import UAccademy.Repository.VisitRepository;
+import UAccademy.Service.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -18,12 +16,15 @@ public class DataLoader implements CommandLineRunner {
     private final PetTypeService petTypeService;
 
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService,
+                      VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -96,6 +97,14 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(pet2);
 
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(pet2);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit);
+
 
         System.out.println("Loaded Owners....");
 
