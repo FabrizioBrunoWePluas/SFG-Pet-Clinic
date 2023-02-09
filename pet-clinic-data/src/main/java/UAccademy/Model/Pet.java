@@ -10,7 +10,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(name= "pet")
+@Table(name= "pets")
 public class Pet  extends BaseEntity{
 
     @Column(name = "name")
@@ -20,8 +20,8 @@ public class Pet  extends BaseEntity{
     @JoinColumn(name = "type_id")
     private PetType petType;
 
-    @ManyToMany
-    @JoinColumn(name = "owner")
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     @Column(name = "birth_date")

@@ -9,6 +9,7 @@ import java.util.Set;
 
 @Getter
 @Setter
+@Entity
 @Table(name = "owners")
 public class Owner extends Person{
 
@@ -24,11 +25,4 @@ public class Owner extends Person{
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
-    public Set<Pet> getPets(){
-        return pets;
-    }
-
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
-    }
 }
